@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Semana 11</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div id="post">
+            <input id="nombre" placeholder="Escribe tu nombre de usuario">
+            <input id="publicacion" placeholder="Escribe tu publicación">
+            <button id="publicar"> Publicar </button>
+        </div>
+            
+        <div id="feed">
+            <h2>Feed news</h2>
+        </div>
+    </body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBQ7wWTmA4BVLfeUHg1FexJVoLAhIj2iPk",
+    authDomain: "practica11-a541f.firebaseapp.com",
+    databaseURL: "https://practica11-a541f.firebaseio.com",
+    projectId: "practica11-a541f",
+    storageBucket: "practica11-a541f.appspot.com",
+    messagingSenderId: "944979165905",
+    appId: "1:944979165905:web:3ba47b4a4242ef4ad13bf0",
+    measurementId: "G-1CX1XN7KQQ"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="js/index.js"></script>

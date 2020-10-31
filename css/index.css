@@ -1,0 +1,51 @@
+#post {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+   
+  
+}
+
+#post * {
+    border: 1px solid;
+    margin:3px 5px; 
+    background: #EEE;
+    text-align: center;
+    font-size: 15px;
+}
+
+#nombre {
+    width:100%;
+    border-radius: 3mm;
+    height: 10mm;
+    border-color: black;
+    font-style: italic;
+}
+
+#publicacion {
+    width:100%;
+    border-radius: 3mm;
+    height: 30mm;
+    border-color: black;
+    font-style: italic;
+}
+
+#publicar {
+    width:40%;
+    color:white;
+    height: 10mm;
+    background: cornflowerblue;
+}
+
+#feed {
+    display: flex;
+    flex-direction:column;
+    width: 24em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
