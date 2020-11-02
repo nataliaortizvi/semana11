@@ -70,6 +70,7 @@
     font-size: 20px;
     margin-right: 30px;
     margin-left: 30px;
+    
 }
 
 .loquepubnom {
@@ -90,11 +91,28 @@
     background: cornflowerblue;
     bottom: 0;
     right: 0;
+    
 }
 
 .responderinp {
     font-size: 15px;
     width: 78.5%;
     height: 10mm;
+    border: 1px solid;
+    border-color: rgb(184, 184, 184);
+}
+
+.loscoments {
+    font-size: 13px;
+    width: 100%;
+}
+
+.comments{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 7px;
+    background:white;
+    border: 1px solid;
+    border-color: rgb(184, 184, 184);
 }
 
