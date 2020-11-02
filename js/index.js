@@ -1,37 +1,52 @@
 //DECLARACIONES
+var database = firebase.database();
+
 const nombre = document.getElementById('nombre');
 const publicacion = document.getElementById('publicacion');
 const btpublicar = document.getElementById('publicar');
-var database = firebase.database();
+const feed = document.getElementById('feed');
 
 //FUNCIONES
 postear = () => {
-    let n = nombre.value;
+
+    //si no escribe nada en un campo
+    if(nombre.value == '' || publicacion.value == ''){
+        alert('Hay un campo vacio');
+        return;
+    }
+
+    //value de las variables
+    let referencia = database.ref('usuario/').push();   
+    let n = '@'+nombre.value;
     let p = publicacion.value;
     
+    //objeto del usuario con el post
+    let user = {
+        nombre: n,
+        publicacion: p, 
+        id: referencia.key,
+    }  
 
-let objeto = {
-    nombre: n,
-    publicacion: p,
+    referencia.set(user);
+    //database.ref('usuario/').set(null);
+
+    //al dar clic, vaciar los inputs
+    nombre.value='';
+    publicacion.value='';
+
 }
 
-let json = JSON.stringify(objeto);
-database.ref('usuario/').push().set(objeto);
-}
-
-//accion del boton de publicar
+//ACCION DE PUBLICAR
 btpublicar.addEventListener('click',postear);
 
-database.ref('usuario').on('value', function(data){
-    //console.log( data.val() );
+//LECTURA
+database.ref('usuario/').on('value', function(data){
+    feed.innerHTML = '';
     data.forEach(
-        function(user){
-            let clave = user.key;
+        user => {
             let valor = user.val();
-            console.log(clave);
-            console.log(valor.nombre);
-            console.log(valor.publicacion);
-            
+            let fila = new LosPost(valor);
+            feed.appendChild(fila.render());
         }
     );
 });

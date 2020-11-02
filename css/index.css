@@ -1,12 +1,11 @@
 #post {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 25em;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-   
-  
+
 }
 
 #post * {
@@ -40,12 +39,62 @@
     background: cornflowerblue;
 }
 
+#titulofeed {
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
 #feed {
     display: flex;
     flex-direction:column;
-    width: 24em;
+    width: 30em;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+.lospost {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 3.5em;
+    background: #EEE;
+    border: 1px solid;
+    border-color: rgb(184, 184, 184);
+}
+
+.loquepub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.loquepubnom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 15px;
+    color: dimgrey;
+    margin-right: 2px;
+    margin-left: 70%;
+    margin-top: 2px;
+}
+
+.responderbt {
+    height: 10mm;
+    font-size: 15px;
+    color:white;
+    background: cornflowerblue;
+    bottom: 0;
+    right: 0;
+}
+
+.responderinp {
+    font-size: 15px;
+    width: 78.5%;
+    height: 10mm;
 }
 
